@@ -10,7 +10,7 @@ editAreaLoader.load_syntax["coldfusion"] = {
 			'include', 'require', 'include_once', 'require_once',
 			'for', 'foreach', 'as', 'if', 'elseif', 'else', 'while', 'do', 'endwhile',
             'endif', 'switch', 'case', 'endswitch',
-			'return', 'break', 'continue'
+			"return", "break", "continue"
 		]
 		,'reserved' : [
 			'AND', 'break', 'case', 'CONTAIN', 'CONTAINS', 'continue', 'default', 'do', 
