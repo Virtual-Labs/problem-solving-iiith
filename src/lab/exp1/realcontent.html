@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head>
-<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)--><h1 id="main-title">
+<!DOCTYPE html><html><head><!--Google Tag Manager--><!--End Google Tag Manager--><!--Google Tag Manager--><!--End Google Tag Manager--></head>
+<body><!--Google Tag Manager (noscript)--><!--End Google Tag Manager (noscript)--><!--Google Tag Manager (noscript)--><!--End Google Tag Manager (noscript)--><h1 id="main-title">
 Numerical Representation
 </h1>
 
@@ -13,30 +8,30 @@ Numerical Representation
 <p> 
 How are number represented in C? In this lab we help you understand how numbers are repsented in C and based on that two problems are given.The 1<sup>st</sup> is simple to solve while the second one is little tricky.
 </p>
-<br/>
+<br>
 <ol>
 <li><h2>Problem 1:</h2>
 <p> 
 Given a positive integer (&lt;= 1000000), find the minimum number of bits required to represent it as a binary number.
 </p>
-<br/><hr/>
-<b>Input Specification</b><br/>
+<br><hr>
+<b>Input Specification</b><br>
 <p>
 Input contains a single positive integer(&lt; 10<sup>6</sup>).
 </p>
-<br/><hr/>
-<b>Output Specification</b><br/>
+<br><hr>
+<b>Output Specification</b><br>
 <p>
 Output the minimum number of bits required for the representing in binary.
 </p>
-<br/><hr/>
-<b>Sample Input and Output</b><br/>
-Input: 4<br/>
-Output:3<br/>
-Input: 16 <br/>
-Output: 5<br/>
-<br/><hr/>
-<br/>
+<br><hr>
+<b>Sample Input and Output</b><br>
+Input: 4<br>
+Output:3<br>
+Input: 16 <br>
+Output: 5<br>
+<br><hr>
+<br>
 </li>
 
 <li><h2>Problem 2:</h2>
@@ -44,23 +39,23 @@ Output: 5<br/>
 Given N(&lt;=26) followed by N distinct characters, we can find all possible 2<sup>N</sup> words(sequence of characters) which preserve the ordering in the input (assuming that all words are valid words in the language). For example, if N is 3 and chatacters are A, B and C, the words in the alphabet order are A, AB, ABC, AC, B, BC and C. Your task now, is to find the index of the word in the dictionary. i.e., if input is AC, output is 4. You may avoid generating all the words and comparing the word with every word in the dictionary.
 
 </p>
-<br/><hr/>
-<b>Input Specification</b><br/>
+<br><hr>
+<b>Input Specification</b><br>
 <p>
 Input contains a number N representing the number of alphabets(&lt;=26) followed by a space and N characters in the dictionary listed in lexicographic order and then a valid word present in dictionary.
 </p>
-<br/><hr/>						
-<b>Output Specification</b><br/>
+<br><hr>						
+<b>Output Specification</b><br>
 <p>
 Output must be the index of the word in the dictionary.
 </p>
-<br/><hr/>
-<b>Sample Input and Output</b><br/>
-Input: 3 A B C AC <br/>
-Output: 4<br/>
-Input: 3 A B C BC<br/>
-Output: 6<br/>
-<br/><hr/>
+<br><hr>
+<b>Sample Input and Output</b><br>
+Input: 3 A B C AC <br>
+Output: 4<br>
+Input: 3 A B C BC<br>
+Output: 6<br>
+<br><hr>
 </li>
 </ol></div> 
 
@@ -68,29 +63,29 @@ Output: 6<br/>
 <h2>Theory</h2> 
 <h3>Problem 1</h3>
 <p>
-Let us try to find how many binary numbers can be generated when you are given a fixed number of bits,say n.<br/>
-n=1, gives<br/>
-0,1<br/>
-n=2, gives<br/>
+Let us try to find how many binary numbers can be generated when you are given a fixed number of bits,say n.<br>
+n=1, gives<br>
+0,1<br>
+n=2, gives<br>
 00,01,10,11
-n=3, gives<br/>
-000,001,010,011,100,101,110,111<br/>
-etc.<br/>
+n=3, gives<br>
+000,001,010,011,100,101,110,111<br>
+etc.<br>
 </p>
 <p>
 It can be seen easily by the multiplication principle that for n bits this number is 2<sup>n</sup>. One of these number corresponds to the 0 in decimal, so the biggest number possible is 2<sup>n</sup> - 1. Therefore, given a number, say N, it can fit in n bits if N is less than 2^n. Hence, the number of bits required to fit a number N is equal to ceil(log2(N)). Now finding ceil(log2(N)) can be done easily by repeatedly dividing the given number, N, by two until you get 0 as the quotient. For example, let N=96
 </p>
 <p>
-Then,<br/>
-Step 1 :96/2 gives quotient as 48<br/>
-Step 2 :48/2 gives quotient as 24<br/>
-Step 3 :24/2 gives quotient as 12<br/>
-Step 4 :12/2 gives quotient as 6<br/>
-Step 5 :6/2 gives quotient as 3<br/>
-Step 6 :3/2 gives quotient as 1<br/>
+Then,<br>
+Step 1 :96/2 gives quotient as 48<br>
+Step 2 :48/2 gives quotient as 24<br>
+Step 3 :24/2 gives quotient as 12<br>
+Step 4 :12/2 gives quotient as 6<br>
+Step 5 :6/2 gives quotient as 3<br>
+Step 6 :3/2 gives quotient as 1<br>
 </p>       
 
-<br/>
+<br>
 
 <h2>Problem 2</h2>
 <p>
